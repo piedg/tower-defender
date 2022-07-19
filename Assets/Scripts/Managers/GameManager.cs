@@ -14,10 +14,8 @@ public class GameManager : MonoSingleton<GameManager>
 
     public int CurrentPower { get { return currentPower; } }
 
-    private void Awake()
+    private void Start()
     {
-        base.Awake();
-
         foreach (GameObject card in initialCards)
         {
             GameObject cardInstance = Instantiate(card);
@@ -25,6 +23,7 @@ public class GameManager : MonoSingleton<GameManager>
         }
 
         currentPower = startingPower;
+        UIManager.Instance.UpdatePowerBalance(currentPower);
     }
 
     private void Update()
@@ -32,10 +31,6 @@ public class GameManager : MonoSingleton<GameManager>
         AddPowerOverTime();
     }
 
-    private void Start()
-    {
-        UIManager.Instance.UpdatePowerBalance(currentPower);
-    }
 
     public void Deposit(int amount)
     {

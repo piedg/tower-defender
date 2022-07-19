@@ -907,3 +907,4 @@ MonoBehaviour:
   - {fileID: 7846222553090362311, guid: afa916924917e3e4da53b2d1105205d1, type: 3}
   startingPower: 150
   currentPower: 0
+  delayAmount: 5
