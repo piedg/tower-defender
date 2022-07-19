@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7027956727d2324291227bd1a42d31b, type: 3}
-  m_Name: Apple
+  m_Name: Bread
   m_EditorClassIdentifier: 
-  cardName: Apple
-  artwork: {fileID: 21300000, guid: 400b48f7eee686e4c8c81334e300be72, type: 3}
-  cost: 100
-  damage: 1
+  cardName: Bread
+  artwork: {fileID: 21300000, guid: 0ebc21368debddc46a20adbbb82ffdf4, type: 3}
+  cost: 150
+  damage: 5
   hits: 3

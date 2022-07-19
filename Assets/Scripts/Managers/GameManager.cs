@@ -31,7 +31,6 @@ public class GameManager : MonoSingleton<GameManager>
         AddPowerOverTime();
     }
 
-
     public void Deposit(int amount)
     {
         currentPower += Mathf.Abs(amount);
@@ -56,7 +55,7 @@ public class GameManager : MonoSingleton<GameManager>
         if (timer >= delayAmount)
         {
             timer = 0f;
-            currentPower += 50; // For every DelayAmount or "second" it will add one to the GoldValue
+            currentPower += 50; 
             UIManager.Instance.UpdatePowerBalance(currentPower);
         }
     }

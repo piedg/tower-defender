@@ -903,6 +903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialCards:
   - {fileID: 1204422937176834772, guid: b1a36f94fbfa35245a154b44fd17e9ef, type: 3}
+  - {fileID: 5086224010503312467, guid: a839e8ceb32531246a8dd18bf0d0bd2d, type: 3}
   - {fileID: 7147297251366692894, guid: 19f02c4e5cfc49845b0684915bdbf3f4, type: 3}
   - {fileID: 7846222553090362311, guid: afa916924917e3e4da53b2d1105205d1, type: 3}
   startingPower: 150
