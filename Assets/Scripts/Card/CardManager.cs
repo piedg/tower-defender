@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CardManager : MonoBehaviour
+public class CardManager : MonoSingleton<CardManager>
 {
     Vector3 mousePos;
 
@@ -37,6 +37,21 @@ public class CardManager : MonoBehaviour
 
         _instance.GetComponentInChildren<SpriteRenderer>().sortingOrder = 100;
         tempInstance = _instance;
+    }
+
+    public GameObject SpawnCharacter(GameObject character, Vector3 spawnPosition)
+    {
+        if (tempInstance != null)
+        {
+            GameObject charInstance = Instantiate(tempInstance, spawnPosition, Quaternion.identity);
+            Destroy(tempInstance);
+        
+            charInstance.GetComponentInChildren<SpriteRenderer>().sortingOrder = 10;
+
+            return character = charInstance;
+        }
+
+        return null;
     }
 
     public void DestroyInstance(GameObject instance)
