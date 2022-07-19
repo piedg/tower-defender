@@ -8,7 +8,7 @@ public class Tile : MonoBehaviour
     [SerializeField] SpriteRenderer sprite;
 
     GameObject characterOnTile;
-    bool isFilled;
+    [SerializeField] bool isFilled;
 
     public void Init(bool isOffSet)
     {
@@ -19,11 +19,9 @@ public class Tile : MonoBehaviour
     {
         if (isFilled) return;
 
-        if (characterOnTile != null)
-        {
+        if (characterOnTile != null && !isFilled)
             isFilled = true;
-        }
-
-        characterOnTile = CardManager.Instance.SpawnCharacter(characterOnTile, transform.position);
+        else
+            characterOnTile = CardManager.Instance.SpawnCharacter(characterOnTile, transform.position);
     }
 }
