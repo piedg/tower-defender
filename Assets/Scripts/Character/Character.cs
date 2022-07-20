@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    public int cost;
+    public int Cost;
+    public int Hits;
 }
