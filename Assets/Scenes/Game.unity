@@ -345,7 +345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 337017788}
   - component: {fileID: 337017789}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GridManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}

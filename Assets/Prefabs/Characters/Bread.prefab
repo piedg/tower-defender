@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4517652163537235128}
   - component: {fileID: 4853310766689289200}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bread
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,6 +48,7 @@ MonoBehaviour:
   Cost: 150
   Hits: 4
   damage: 1
+  firingDistance: 8
 --- !u!1 &4517652163968001546
 GameObject:
   m_ObjectHideFlags: 0

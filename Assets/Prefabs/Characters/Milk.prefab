@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4517652163537235128}
   - component: {fileID: -2114442244925924418}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Milk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,6 +48,7 @@ MonoBehaviour:
   Cost: 200
   Hits: 5
   damage: 2
+  firingDistance: 10
 --- !u!1 &4517652163968001546
 GameObject:
   m_ObjectHideFlags: 0
