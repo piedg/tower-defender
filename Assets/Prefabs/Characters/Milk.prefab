@@ -48,7 +48,9 @@ MonoBehaviour:
   Cost: 200
   Hits: 5
   damage: 2
-  firingDistance: 10
+  aimDistance: 10
+  firingRate: 2
+  projectilePrefab: {fileID: 5953062029059846018, guid: 07a05c68f8f392b47bcb90c9eab2284d, type: 3}
 --- !u!1 &4517652163968001546
 GameObject:
   m_ObjectHideFlags: 0
