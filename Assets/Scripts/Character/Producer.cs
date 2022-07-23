@@ -5,6 +5,7 @@ using UnityEngine;
 public class Producer : Character
 {
     [SerializeField] int producedPower;
+    float delayAmount;
 
     private void Update()
     {
@@ -13,6 +14,6 @@ public class Producer : Character
 
     void ProducePower()
     {
-        GameManager.Instance.AddPowerOverTime(producedPower);
+        GameManager.Instance.AddPowerOverTime(producedPower, Random.Range(5f, 20f));
     }
 }

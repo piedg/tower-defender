@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GridManager : MonoBehaviour
+public class GridManager : MonoSingleton<GridManager>
 {
-    [SerializeField] private int width = 9, height = 5;
-    [SerializeField] private Tile tile;
-    [SerializeField] private float cameraOffsetX = 0.5f, cameraOffsetY = 0.5f; 
-    
+    public int width = 9, height = 5;
+
+    [SerializeField] private GameObject tile;
+    [SerializeField] private float cameraOffsetX = 0.5f, cameraOffsetY = 0.5f;
+
+    float[] tilesPositionsY;
     private void Start()
     {
         GenerateGrid();
@@ -22,11 +24,12 @@ public class GridManager : MonoBehaviour
             {
                 bool isOffset = ((x / 1.5f) + (y / 1.5f)) % 2 == 1;
 
-                Tile spawnedTile = Instantiate(tile, new Vector3(x, y), Quaternion.identity);
+                GameObject spawnedTile = Instantiate(tile, new Vector3(x, y), Quaternion.identity);
 
                 spawnedTile.transform.parent = transform;
                 spawnedTile.name = $"Tile {x} {y}";
-                spawnedTile.Init(isOffset);
+                spawnedTile.GetComponent<Tile>().Init(isOffset);
+
             }
         }
     }

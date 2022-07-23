@@ -35,12 +35,12 @@ public class CardManager : MonoSingleton<CardManager>
         Debug.Log("Card clicked " + character.name);
         cardCost = character.GetComponent<Character>().Cost;
 
-        GameObject _instance = Instantiate(character.gameObject, new Vector3(mousePos.x, mousePos.y, 0), Quaternion.identity);
-            _instance.transform.position = mousePos;
+        GameObject _instance = Instantiate(character, new Vector3(mousePos.x, mousePos.y, 0), Quaternion.identity);
+        
+        _instance.transform.position = mousePos;
+        _instance.GetComponentInChildren<SpriteRenderer>().sortingOrder = 100;
 
         EnableAllComponents(_instance, false);
-
-        _instance.GetComponentInChildren<SpriteRenderer>().sortingOrder = 100;
         tempInstance = _instance;
     }
 

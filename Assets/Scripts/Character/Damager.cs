@@ -12,7 +12,6 @@ public class Damager : Character
     [SerializeField] float firingRate;
     float nextFire;
 
-
     [SerializeField] GameObject projectilePrefab;
     private void Start()
     {
@@ -23,7 +22,7 @@ public class Damager : Character
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, aimDistance, LayerMask.GetMask("Enemy"));
 
-        if(hit.collider != null)
+        if (hit.collider != null)
         {
             Shoot();
             Debug.Log(hit.collider.gameObject.name);
@@ -39,4 +38,5 @@ public class Damager : Character
             _instance.GetComponent<Projectile>().SetDamage(_damage);
         }
     }
+
 }

@@ -28,7 +28,7 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void Update()
     {
-        AddPowerOverTime(50);
+        AddPowerOverTime(25, delayAmount);
     }
 
     public void Deposit(int amount)
@@ -48,14 +48,14 @@ public class GameManager : MonoSingleton<GameManager>
         UIManager.Instance.UpdatePowerBalance(currentPower);
     }
 
-    public void AddPowerOverTime(int amount)
+    public void AddPowerOverTime(int _amount, float _delayAmount)
     {
-        timer += Time.deltaTime;
+        this.timer += Time.deltaTime;
 
-        if (timer >= delayAmount)
+        if (this.timer >= _delayAmount)
         {
-            timer = 0f;
-            currentPower += amount; 
+            this.timer = 0f;
+            this.currentPower += _amount; 
             UIManager.Instance.UpdatePowerBalance(currentPower);
         }
     }

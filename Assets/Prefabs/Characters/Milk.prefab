@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cost: 200
   Hits: 5
-  damage: 2
+  cardSO: {fileID: 11400000, guid: 38aa301f5c8b73249ba861f0dc4b1d18, type: 2}
   aimDistance: 10
   firingRate: 2
   projectilePrefab: {fileID: 5953062029059846018, guid: 07a05c68f8f392b47bcb90c9eab2284d, type: 3}

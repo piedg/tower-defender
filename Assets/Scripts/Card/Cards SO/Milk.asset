@@ -15,5 +15,5 @@ MonoBehaviour:
   cardName: Milk
   artwork: {fileID: 21300000, guid: f44c7f251d669784bb47f6edbe540f55, type: 3}
   cost: 200
-  damage: 10
+  damage: 2
   hits: 5

@@ -23,7 +23,7 @@ public class Projectile : MonoBehaviour
 
         if (collision != null)
         {
-            //collision.gameObject.GetComponent<Enemy>().TakeDamage(_damage);
+            collision.gameObject.GetComponent<Enemy>().TakeDamage(_damage);
         }
 
         Destroy(gameObject);
