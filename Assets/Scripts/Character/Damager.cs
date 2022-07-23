@@ -4,10 +4,39 @@ using UnityEngine;
 
 public class Damager : Character
 {
-    [SerializeField] int damage;
+    public CardSO cardSO;
 
+    int _damage;
+
+    [SerializeField] float aimDistance;
+    [SerializeField] float firingRate;
+    float nextFire;
+
+    [SerializeField] GameObject projectilePrefab;
     private void Start()
     {
-        Debug.Log("Damage " + damage);
+        _damage = cardSO.damage;
     }
+
+    private void Update()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, aimDistance, LayerMask.GetMask("Enemy"));
+
+        if (hit.collider != null)
+        {
+            Shoot();
+            Debug.Log(hit.collider.gameObject.name);
+        }
+    }
+
+    void Shoot()
+    {
+        if (Time.time > nextFire)
+        {
+            nextFire = Time.time + firingRate;
+            GameObject _instance = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            _instance.GetComponent<Projectile>().SetDamage(_damage);
+        }
+    }
+
 }

@@ -15,5 +15,5 @@ MonoBehaviour:
   cardName: Bread
   artwork: {fileID: 21300000, guid: 0ebc21368debddc46a20adbbb82ffdf4, type: 3}
   cost: 150
-  damage: 5
+  damage: 1
   hits: 3

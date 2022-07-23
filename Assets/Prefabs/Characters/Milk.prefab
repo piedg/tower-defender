@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4517652163537235128}
   - component: {fileID: -2114442244925924418}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Milk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cost: 200
   Hits: 5
-  damage: 2
+  cardSO: {fileID: 11400000, guid: 38aa301f5c8b73249ba861f0dc4b1d18, type: 2}
+  aimDistance: 10
+  firingRate: 2
+  projectilePrefab: {fileID: 5953062029059846018, guid: 07a05c68f8f392b47bcb90c9eab2284d, type: 3}
 --- !u!1 &4517652163968001546
 GameObject:
   m_ObjectHideFlags: 0

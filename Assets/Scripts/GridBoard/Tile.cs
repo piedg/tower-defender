@@ -23,5 +23,6 @@ public class Tile : MonoBehaviour
             isFilled = true;
         else
             characterOnTile = CardManager.Instance.SpawnCharacter(characterOnTile, transform.position);
+
     }
 }
