@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Damager : Character
 {
-    public CardSO cardSO;
-
     int _damage;
 
     [SerializeField] float aimDistance;
@@ -15,7 +13,7 @@ public class Damager : Character
     [SerializeField] GameObject projectilePrefab;
     private void Start()
     {
-        _damage = cardSO.damage;
+        _damage = base.cardSO.damage;
     }
 
     private void Update()

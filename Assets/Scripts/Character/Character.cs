@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    public CardSO cardSO;
+
     public int Cost;
     public int Hits;
 
